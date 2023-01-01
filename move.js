@@ -35,3 +35,23 @@ let index = () => {
     });
 };
 
+let insertImg = (e) => {
+    let div = document.createElement("div");
+    div.className = "rounded-full";
+    let img = document.createElement("img");
+    img.src = e;
+    div.appendChild(img);
+    document.getElementsByClassName("grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-7")[0].insertAdjacentElement("beforeend", img);
+};
+
+let congrats = () => {
+    try {
+        var myArray = localStorage.getItem('myArray').split("!");
+        insertImg(myArray);
+        for (let i = 0; i < myArray.length; i++) {
+            insertImg(myArray[i]);
+        }
+    } catch (err) {
+        console.log(err);
+    }
+};
