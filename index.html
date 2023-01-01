@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Submission</title>
+    <link rel="stylesheet" href="./public/styles.css" />
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/webcam-easy/dist/webcam-easy.min.js"
+    ></script>
+  </head>
+
+  <body class="bg-slate-800" onload="index()">
+    <section>
+      <h1 class="text-4xl uppercase font-extrabold text-center p-8 text-white">
+        Profile Submission
+      </h1>
+      <div class="flex flex-col items-center py-5">
+        <hr class="h-3 w-1/4 bg-black rounded-lg" />
+        <div class="grid lg:grid-cols-2 sm:grid-cols-1">
+          <div class="flex flex-col items-center gap-8 p-40 shadow-xl text-lg">
+            <!-- upload display -->
+            <div class="contianer border-black border-2 flex content-center">
+              <video
+                id="webcam"
+                autoplay
+                playsinline
+                width="320"
+                height="280"
+              ></video>
+              <canvas id="canvas" class="d-none"></canvas>
+              <img src="" alt="" id="download-photo" />
+            </div>
+            <div class="grid grid-cols-2 gap-8">
+              <div>
+                <!-- Take pic -->
+                <button class="rounded-md bg-black" id="Start_cam">
+                  <p
+                    class="px-5 py-2 font-bold text-gray-300 hover:text-black hover:bg-gray-300 hover:rounded-md transition-colors duration-300"
+                  >
+                    Start Cam
+                  </p>
+                </button>
+              </div>
+              <div>
+                <!-- Take pic -->
+                <button class="rounded-md bg-black" id="Pic">
+                  <p
+                    class="px-5 py-2 font-bold text-gray-300 hover:text-black hover:bg-gray-300 hover:rounded-md transition-colors duration-300"
+                  >
+                    Capture
+                  </p>
+                </button>
+              </div>
+            </div>
+            <div>
+              <!-- reset everthing -->
+              <button class="rounded-md bg-black" id="reset">
+                <p
+                  class="px-5 py-2 font-bold text-gray-300 hover:text-black hover:bg-gray-300 hover:rounded-md transition-colors duration-300"
+                >
+                  Re - Take
+                </p>
+              </button>
+            </div>
+          </div>
+          <div class="flex flex-col items-center gap-8 p-40">
+            <div class="font-semibold">
+              <!-- form -->
+              <form action="" class="grid sm:grid-cols-1 lg:grid-cols-2 gap-9">
+                <div>
+                  <label for="FirstName" class="text-white">First Name</label
+                  ><br />
+                  <input
+                    type="text"
+                    name="FirstName"
+                    class="border-2 hover:bg-slate-200 rounded-md mt-2 text-black"
+                  />
+                </div>
+                <div>
+                  <label for="LastName" class="text-white">Last Name</label
+                  ><br />
+                  <input
+                    type="text"
+                    name="LastName"
+                    class="border-2 hover:bg-slate-200 rounded-md mt-2 text-black"
+                  />
+                </div>
+                <div>
+                  <label for="Number" class="text-white"> Ph. Number</label
+                  ><br />
+                  <input
+                    type="number"
+                    name="Number"
+                    class="border-2 hover:bg-slate-200 rounded-md mt-2 text-black"
+                  />
+                </div>
+                <div>
+                  <label for="Email" class="text-white">Email</label><br />
+                  <input
+                    type="email"
+                    name="Email"
+                    class="border-2 hover:bg-slate-200 rounded-md mt-2 text-black"
+                  />
+                </div>
+                <div>
+                  <label for="Address" class="text-white">Address</label><br />
+                  <input
+                    type="text"
+                    name="Address"
+                    class="border-2 hover:bg-slate-200 rounded-md mt-2 text-black"
+                  />
+                </div>
+              </form>
+            </div>
+            <div>
+              <!-- send form -->
+              <button class="rounded-md bg-black">
+                <p
+                  class="px-5 py-2 font-bold text-gray-300 hover:text-black hover:bg-gray-300 hover:rounded-md transition-colors duration-300"
+                >
+                  Verify Details
+                </p>
+              </button>
+            </div>
+            <div>
+              <!-- submit -->
+              <button class="rounded-md bg-black" id="submit">
+                <p
+                  class="px-5 py-2 font-bold text-gray-300 hover:text-black hover:bg-gray-300 hover:rounded-md transition-colors duration-300"
+                >
+                  <a href="html/congratulation_page.html">Submit</a>
+                </p>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./move.js"></script>
+  </body>
+</html>
